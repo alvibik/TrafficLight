@@ -19,21 +19,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="KUq-IU-IQ1">
                                 <rect key="frame" x="118.66666666666669" y="89" width="193" height="629"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLB-6Q-Las">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLB-6Q-Las">
                                         <rect key="frame" x="0.0" y="0.0" width="193" height="193"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="uLB-6Q-Las" secondAttribute="height" multiplier="1:1" id="jGr-lp-Py4"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Cx-ZD-7TF">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Cx-ZD-7TF">
                                         <rect key="frame" x="0.0" y="218" width="193" height="193"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="1Cx-ZD-7TF" secondAttribute="height" multiplier="1:1" id="4pv-RK-Xg7"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNp-77-HZS">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNp-77-HZS">
                                         <rect key="frame" x="0.0" y="436" width="193" height="193"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
@@ -53,6 +53,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="startButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="xZM-l3-02q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -66,7 +69,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="greenView" destination="CNp-77-HZS" id="OzW-Gh-UJm"/>
                         <outlet property="redView" destination="uLB-6Q-Las" id="o4G-sg-FqD"/>
+                        <outlet property="startButton" destination="Qz4-eQ-3UX" id="ahk-N5-OwT"/>
+                        <outlet property="yellowView" destination="1Cx-ZD-7TF" id="BJ0-d3-pBe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
